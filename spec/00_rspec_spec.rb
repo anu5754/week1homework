@@ -20,7 +20,7 @@ describe "The Rspec ruby gem" do
     it "alerts you when examples fail" do
       # When this example fails,
       # it will show "expected" as 2, and "actual" as 1
-      1.should eq 2
+      1.should_not eq 2
     end
 
     it "creates a be_zero matcher when it finds a #zero? predicate method" do
@@ -29,7 +29,9 @@ describe "The Rspec ruby gem" do
       0.should be_zero
     end
 
-    it "supports placeholder examples that lack code (like this one)"
+    it "alerts when string comparison fails" do
+      "first".should_not eq "second"
+    end
 
     it "requires that examples use expectations, e.g. #should, or you get a false positive" do
       # The following expression is false.

@@ -18,18 +18,32 @@ describe 'Everything is an Object!' do
     "Two".should be_a Object
   end
 
-  it 'Numbers are objects'
+  it 'Numbers are objects' do
+    1.should be_a Object
+  end
 
-  it 'Hashes are objects'
+  it 'Hashes are objects' do
+    'h[first,second]'.should be_a Object
+  end
 
-  it 'Arrays are objects'
+  it 'Arrays are objects' do
+    'A[1]'.should be_a Object
+  end
 
-  it 'Expressions evaluate to objects'
+  it 'Expressions evaluate to objects' do
+     "<".should be_a Object 
+  end
 
-  it 'Symbols are objects'
+  it 'Symbols are objects' do
+      ':'.should be_a Object
+  end
 
-  it 'Classes are objects'
+  it 'Classes are objects' do
+    Fixnum.should be_a Object
+  end
 
-  it 'ADD ANY EXAMPLE THAT EVALUATES AN OBJECT'
+  it 'Modulus Operator is a Object' do
+    '%'.should be_a Object
+  end
 
 end
